@@ -65,16 +65,13 @@ public class GCMIntentService extends GCMBaseIntentService {
 		// Send a notification if there is a message or title, otherwise just send data
 		String message = extras.getString("message");
         String title = extras.getString("title");
-        String contentAvailable = extras.getString("content-available");
 
 		if (extras != null)
 		{
 		    if ((message != null && message.length() != 0) || (title != null && title.length() != 0)) {
                 Log.d(TAG, "create notification");
                 createNotification(context, extras);
-            }
-
-            if ("1".equals(contentAvailable)) {
+            } else {
                 Log.d(TAG, "send notification event");
                 PushPlugin.sendExtras(extras);
             }
