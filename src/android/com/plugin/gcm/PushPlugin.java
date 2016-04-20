@@ -21,9 +21,6 @@ import java.util.Iterator;
 
 public class PushPlugin extends CordovaPlugin {
 	public static final String TAG = "PushPlugin";
-    public static final String MESSAGE = "message";
-    public static final String TITLE = "title";
-    public static final String CONTENT_AVAILABLE = "content-available";
 	public static final String REGISTER = "register";
 	public static final String UNREGISTER = "unregister";
 	public static final String EXIT = "exit";

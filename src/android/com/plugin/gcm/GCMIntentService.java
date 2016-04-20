@@ -63,9 +63,9 @@ public class GCMIntentService extends GCMBaseIntentService {
 		Bundle extras = intent.getExtras();
 
 		// Send a notification if there is a message or title, otherwise just send data
-		String message = extras.getString(MESSAGE);
-        String title = extras.getString(TITLE);
-        String contentAvailable = extras.getString(CONTENT_AVAILABLE);
+		String message = extras.getString("message");
+        String title = extras.getString("title");
+        String contentAvailable = extras.getString("content-available");
 
 		if (extras != null)
 		{
